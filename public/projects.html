@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="shortcut icon" href="./images/logo.png" type="image/x-icon">
+  <title>Projects | Odinaka Joy</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/styles.css">
+  <style>
+    /* customizable snowflake styling */
+    .snowflake {
+      color: #fff;
+      font-size: 1em;
+      font-family: Arial, sans-serif;
+      text-shadow: 0 0 5px #000;
+    }
+
+    @-webkit-keyframes snowflakes-fall {
+      0% {
+        top: -10%
+      }
+
+      100% {
+        top: 100%
+      }
+    }
+
+    @-webkit-keyframes snowflakes-shake {
+
+      0%,
+      100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0)
+      }
+
+      50% {
+        -webkit-transform: translateX(80px);
+        transform: translateX(80px)
+      }
+    }
+
+    @keyframes snowflakes-fall {
+      0% {
+        top: -10%
+      }
+
+      100% {
+        top: 100%
+      }
+    }
+
+    @keyframes snowflakes-shake {
+
+      0%,
+      100% {
+        transform: translateX(0)
+      }
+
+      50% {
+        transform: translateX(80px)
+      }
+    }
+
+    .snowflake {
+      position: fixed;
+      top: -10%;
+      z-index: 9999;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      cursor: default;
+      -webkit-animation-name: snowflakes-fall, snowflakes-shake;
+      -webkit-animation-duration: 10s, 3s;
+      -webkit-animation-timing-function: linear, ease-in-out;
+      -webkit-animation-iteration-count: infinite, infinite;
+      -webkit-animation-play-state: running, running;
+      animation-name: snowflakes-fall, snowflakes-shake;
+      animation-duration: 10s, 3s;
+      animation-timing-function: linear, ease-in-out;
+      animation-iteration-count: infinite, infinite;
+      animation-play-state: running, running
+    }
+
+    .snowflake:nth-of-type(0) {
+      left: 1%;
+      -webkit-animation-delay: 0s, 0s;
+      animation-delay: 0s, 0s
+    }
+
+    .snowflake:nth-of-type(1) {
+      left: 10%;
+      -webkit-animation-delay: 1s, 1s;
+      animation-delay: 1s, 1s
+    }
+
+    .snowflake:nth-of-type(2) {
+      left: 20%;
+      -webkit-animation-delay: 6s, .5s;
+      animation-delay: 6s, .5s
+    }
+
+    .snowflake:nth-of-type(3) {
+      left: 30%;
+      -webkit-animation-delay: 4s, 2s;
+      animation-delay: 4s, 2s
+    }
+
+    .snowflake:nth-of-type(4) {
+      left: 40%;
+      -webkit-animation-delay: 2s, 2s;
+      animation-delay: 2s, 2s
+    }
+
+    .snowflake:nth-of-type(5) {
+      left: 50%;
+      -webkit-animation-delay: 8s, 3s;
+      animation-delay: 8s, 3s
+    }
+
+    .snowflake:nth-of-type(6) {
+      left: 60%;
+      -webkit-animation-delay: 6s, 2s;
+      animation-delay: 6s, 2s
+    }
+
+    .snowflake:nth-of-type(7) {
+      left: 70%;
+      -webkit-animation-delay: 2.5s, 1s;
+      animation-delay: 2.5s, 1s
+    }
+
+    .snowflake:nth-of-type(8) {
+      left: 80%;
+      -webkit-animation-delay: 1s, 0s;
+      animation-delay: 1s, 0s
+    }
+
+    .snowflake:nth-of-type(9) {
+      left: 90%;
+      -webkit-animation-delay: 3s, 1.5s;
+      animation-delay: 3s, 1.5s
+    }
+
+    .snowflake:nth-of-type(10) {
+      left: 25%;
+      -webkit-animation-delay: 2s, 0s;
+      animation-delay: 2s, 0s
+    }
+
+    .snowflake:nth-of-type(11) {
+      left: 65%;
+      -webkit-animation-delay: 4s, 2.5s;
+      animation-delay: 4s, 2.5s
+    }
+
+    div.a {
+      font-size: 100px;
+    }
+
+    .rotated2 {
+      writing-mode: tb-rl;
+      transform: rotate(-180deg);
+      font-size: 100px;
+    }
+  </style>
+</head>
+<div class="snowflakes" aria-hidden="true">
+  <div class="snowflake">❆</div>
+  <div class="snowflake">o</div>
+  <div class="snowflake">❅</div>
+  <div class="snowflake">d</div>
+  <div class="snowflake">❆</div>
+  <div class="snowflake">i</div>
+  <div class="snowflake">❅</div>
+  <div class="snowflake">n</div>
+  <div class="snowflake">❆</div>
+  <div class="snowflake">a</div>
+  <div class="snowflake">❅</div>
+  <div class="snowflake">k</div>
+  <div class="snowflake">❆</div>
+  <div class="snowflake">a</div>
+  <div class="snowflake">❅</div>
+  <div class="snowflake">❆</div>
+  <div class="snowflake">❅</div>
+  <div class="snowflake">j</div>
+  <div class="snowflake">❆</div>
+  <div class="snowflake">o</div>
+  <div class="snowflake">❅</div>
+  <div class="snowflake">y</div>
+  <div class="snowflake">❆</div>
+  <div class="snowflake">❅</div>
+</div>
+
+<body>
+  <header class="nav lg-nav">
+    <nav class="header">
+      <div class="header__brand"><a href="/"><img src="./images/logo.png" alt="Odinaka Joy" /></a></div>
+      <ul class="header__links">
+        <li><a href="/about-me">ABOUT</a></li>
+        <li><a href="/projects">PROJECTS</a></li>
+        <li><a href="/communities">COMMUNITIES</a></li>
+        <li><a href="/talks">TALKS</a></li>
+        <li><a href="/contact-me">CONTACT</a></li>
+        <li class="resume"><a href="https://dinakajoy.github.io/resume/" target="_BLANK">Resume</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <header class="nav sm-nav">
+    <nav class="header">
+      <div class="header__brand"><a href="/"><img src="./images/logo.png" alt="Odinaka Joy" /></a></div>
+      <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="overlay-content">
+          <a href="/about-me">ABOUT</a>
+          <a href="/projects">PROJECTS</a>
+          <a href="/communities">COMMUNITIES</a>
+          <a href="/talks">TALKS</a>
+          <a href="/contact-me">CONTACT</a>
+          <a href="https://dinakajoy.github.io/resume/" target="_BLANK" class="resume">Resume</a>
+        </div>
+      </div>
+      <span class="go-right" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+    </nav>
+  </header>
+  <main>
+    <section id="projects">
+      <div class="container">
+        <div class="project">
+          <div class="proj">
+            <div class="img"><img src="./images/projects/github-profile.png" alt="Github-Profile"></div>
+            <div class="details">
+              <h2><a href="https://github-profile-app-by-joy.netlify.app/" target="_blank" rel="noopener noreferrer">Github-Profile</a></h2>
+              <p>This is a simple application where users can create cardlist of registered users on github. It consumes github's API.</p>
+              <div class="tools">
+                <span>CSS</span><span>React</span><span>Github API</span><span>Netlify</span>
+              </div>
+              <div class="links">
+                <span><a href="https://github.com/dinakajoy/github_profile_app" target="_blank" rel="noopener noreferrer"><i class="fa fa-github"></i></a></span>
+
+                <span><a href="https://github-profile-app-by-joy.netlify.app/" target="_blank" rel="noopener noreferrer"><i class="fa fa-link"></i></a></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="proj">
+            <div class="img"><img src="./images/projects/mini-netflix.png" alt="Mini-Netflix"></div>
+            <div class="details">
+              <h2><a href="https://mini-netflix-by-joy.netlify.com/" target="_blank" rel="noopener noreferrer">Mini-Netflix</a></h2>
+              <p>Mini-Netflix Movie App A Movie App Built On Angular, Where Users Can View Recent Movies and Add or Remove favourite Movies.</p>
+              <div class="tools">
+                <span>Angular</span><span>Node/Express</span><span>MongoDB</span><span>Netlify</span><span>Heroku</span>
+              </div>
+              <div class="links">
+                <span><a href="https://github.com/dinakajoy/mini-netflix-movie-app" target="_blank" rel="noopener noreferrer"><i class="fa fa-github"></i></a></span>
+
+                <span><a href="https://mini-netflix-by-joy.netlify.com/" target="_blank" rel="noopener noreferrer"><i class="fa fa-link"></i></a></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="proj">
+            <div class="img"><img src="./images/projects/news-app.png" alt="News App"></div>
+            <div class="details">
+              <h2><a href="https://dinakajoy.github.io/news-app/" target="_blank" rel="noopener noreferrer">News App</a></h2>
+              <p>A news app where you can read up latest news on different topics such as technology, health, science, etc</p>
+              <div class="tools">
+                <span>HTML</span><span>CSS</span><span>JavaScript</span><span>News API</span><span>Github Pages</span><span>PWA</span>
+              </div>
+              <div class="links">
+                <span><a href="https://github.com/dinakajoy/news-app" target="_blank" rel="noopener noreferrer"><i class="fa fa-github"></i></a></span>
+
+                <span><a href="https://dinakajoy.github.io/news-app/" target="_blank" rel="noopener noreferrer"><i class="fa fa-link"></i></a></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="proj">
+            <div class="img"><img src="./images/projects/credit-card-validation.png" alt="Credit Card Validation"></div>
+            <div class="details">
+              <h2><a href="https://my-creditcard-project.netlify.com/" target="_blank" rel="noopener noreferrer">Credit Card Validation</a></h2>
+              <p>This is a simple javascript e-commerce application that validates users credit cards after selecting an item from the list of products. It does not process the payment, just validates your credit card.</p>
+              <div class="tools">
+                <span>HTML</span><span>CSS</span><span>JavaScript</span><span>IndexedDB</span><span>Netlify</span>
+              </div>
+              <div class="links">
+                <span><a href="https://github.com/dinakajoy/Credit_Card_Validation" target="_blank" rel="noopener noreferrer"><i class="fa fa-github"></i></a></span>
+
+                <span><a href="https://my-creditcard-project.netlify.com/" target="_blank" rel="noopener noreferrer"><i class="fa fa-link"></i></a></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="proj">
+            <div class="img"><img src="./images/projects/lancerfree.png" alt="LancerFree"></div>
+            <div class="details">
+              <h2><a href="https://dinakajoy.github.io/lancerfree/" target="_blank" rel="noopener noreferrer">LancerFree</a></h2>
+              <p>This is a clone of freelancer.com website called lancerfree</p>
+              <div class="tools">
+                <span>HTML</span><span>CSS</span><span>Github Pages</span>
+              </div>
+              <div class="links">
+                <span><a href="https://github.com/dinakajoy/lancerfree" target="_blank" rel="noopener noreferrer"><i class="fa fa-github"></i></a></span>
+
+                <span><a href="https://dinakajoy.github.io/lancerfree/" target="_blank" rel="noopener noreferrer"><i class="fa fa-link"></i></a></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="proj">
+            <div class="img"><img src="./images/projects/landingpage-with-node.png" alt="CompanyProfile With Node"></div>
+            <div class="details">
+              <h2><a href="https://secure-taiga-84939.herokuapp.com/" target="_blank" rel="noopener noreferrer">CompanyProfile With Node</a></h2>
+              <p>This is a simple four pages website built with HTML, CSS and served with Node. Just to learn how to use node without a framework for a complete website.</p>
+              <div class="tools">
+                <span>HTML</span><span>CSS</span><span>Node</span><span>Heroku</span>
+              </div>
+              <div class="links">
+                <span><a href="https://github.com/dinakajoy/company_profile_with_node" target="_blank" rel="noopener noreferrer"><i class="fa fa-github"></i></a></span>
+
+                <span><a href="https://secure-taiga-84939.herokuapp.com/" target="_blank" rel="noopener noreferrer"><i class="fa fa-link"></i></a></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="proj">
+            <div class="img"><img src="./images/projects/blur-effect.png" alt="Landing Page With Blur Effect"></div>
+            <div class="details">
+              <h2><a href="https://dinakajoy.github.io/html_css_landing_page_with_blur_effect/" target="_blank" rel="noopener noreferrer">Landing Page With Blur Effect</a></h2>
+              <p>This is a simple HTML and CSS website landing page that demos a blur effect</p>
+              <div class="tools">
+                <span>HTML</span><span>CSS</span><span>Github Pages</span>
+              </div>
+              <div class="links">
+                <span><a href="https://github.com/dinakajoy/html_css_landing_page_with_blur_effect" target="_blank" rel="noopener noreferrer"><i class="fa fa-github"></i></a></span>
+
+                <span><a href="https://dinakajoy.github.io/html_css_landing_page_with_blur_effect/" target="_blank" rel="noopener noreferrer"><i class="fa fa-link"></i></a></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="proj">
+            <div class="img"><img src="./images/projects/dom-fun-app.png" alt="DOM Fun App"></div>
+            <div class="details">
+              <h2><a href="https://dinakajoy.github.io/DOM-fun-app/" target="_blank" rel="noopener noreferrer">DOM Fun App</a></h2>
+              <p>This is an application that shows how to manipulate the DOM. It has no specific function but just have fun while interacting with the elements</p>
+              <div class="tools">
+                <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Github Pages</span>
+              </div>
+              <div class="links">
+                <span><a href="https://github.com/dinakajoy/DOM-fun-app" target="_blank" rel="noopener noreferrer"><i class="fa fa-github"></i></a></span>
+
+                <span><a href="https://dinakajoy.github.io/DOM-fun-app/" target="_blank" rel="noopener noreferrer"><i class="fa fa-link"></i></a></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="proj">
+            <div class="img"><img src="./images/projects/pixel-art-maker.png" alt="Pixel Art Maker"></div>
+            <div class="details">
+              <h2><a href="https://dinakajoy.github.io/pixel-art-maker-app/" target="_blank" rel="noopener noreferrer">Pixel Art Maker</a></h2>
+              <p>A program that dynamically creates a grid that users can interact with and create awesome colored grid patterns</p>
+              <div class="tools">
+                <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Github Pages</span>
+              </div>
+              <div class="links">
+                <span><a href="https://github.com/dinakajoy/pixel-art-maker-app" target="_blank" rel="noopener noreferrer"><i class="fa fa-github"></i></a></span>
+
+                <span><a href="https://dinakajoy.github.io/pixel-art-maker-app/" target="_blank" rel="noopener noreferrer"><i class="fa fa-link"></i></a></span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="proj">
+            <div class="img"><img src="./images/projects/company-demo-website.png" alt="Company Demo Website"></div>
+            <div class="details">
+              <h2><a href="https://dinakajoy.github.io/simple_company_portfolio_demo/" target="_blank" rel="noopener noreferrer">Company Demo Website</a></h2>
+              <p>This is a four page demo of a company website</p>
+              <div class="tools">
+                <span>HTML</span><span>CSS</span><span>Github Pages</span>
+              </div>
+              <div class="links">
+                <span><a href="https://github.com/dinakajoy/simple_company_portfolio_demo" target="_blank" rel="noopener noreferrer"><i class="fa fa-github"></i></a></span>
+
+                <span><a href="https://dinakajoy.github.io/simple_company_portfolio_demo/" target="_blank" rel="noopener noreferrer"><i class="fa fa-link"></i></a></span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Designed & Developed By Odinaka Joy</p>
+    <div class="socials">
+      <a href="https://github.com/dinakajoy" target="_blank" rel="noopener noreferrer"><i class="fa fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/dinakajoy/" target="_blank" rel="noopener noreferrer"><i
+          class="fa fa-linkedin"></i></a>
+      <a href="https://twitter.com/dinakajoy" target="_blank" rel="noopener noreferrer"><i
+          class="fa fa-twitter"></i></a>
+      <a href="http://facebook.com/odinaka.joy" target="_blank" rel="noopener noreferrer"><i
+          class="fa fa-facebook"></i></a>
+      <a href="https://stackoverflow.com/users/10469483/odinaka-joy" target="_blank" rel="noopener noreferrer"><i
+          class="fa fa-stack-overflow"></i></a>
+      <!-- <a href="https://www.freecodecamp.org/dinakajoy" target="_blank" rel="noopener noreferrer"><i class="fa fa-free-code-camp"></i></a> -->
+      <!-- <a href="https://www.hackerrank.com/dinakajoy" target="_blank" rel="noopener noreferrer"><i class="fa fa-code"></i></a> -->
+      <a href="https://codepen.io/dinakajoy" target="_blank" rel="noopener noreferrer"><i class="fa fa-codepen"></i></a>
+    </div>
+  </footer>
+  <script>
+    function openNav() {
+      document.getElementById("myNav").style.width = "100%";
+    }
+
+    function closeNav() {
+      document.getElementById("myNav").style.width = "0%";
+    }
+  </script>
+  <script src="../js/main.js"></script>
+</body>
+
+</html>

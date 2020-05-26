@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="shortcut icon" href="./images/logo.png" type="image/x-icon">
+  <title>Communities | Odinaka Joy</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/styles.css">
+  <style>
+    /* customizable snowflake styling */
+    .snowflake {
+      color: #fff;
+      font-size: 1em;
+      font-family: Arial, sans-serif;
+      text-shadow: 0 0 5px #000;
+    }
+
+    @-webkit-keyframes snowflakes-fall {
+      0% {
+        top: -10%
+      }
+
+      100% {
+        top: 100%
+      }
+    }
+
+    @-webkit-keyframes snowflakes-shake {
+
+      0%,
+      100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0)
+      }
+
+      50% {
+        -webkit-transform: translateX(80px);
+        transform: translateX(80px)
+      }
+    }
+
+    @keyframes snowflakes-fall {
+      0% {
+        top: -10%
+      }
+
+      100% {
+        top: 100%
+      }
+    }
+
+    @keyframes snowflakes-shake {
+
+      0%,
+      100% {
+        transform: translateX(0)
+      }
+
+      50% {
+        transform: translateX(80px)
+      }
+    }
+
+    .snowflake {
+      position: fixed;
+      top: -10%;
+      z-index: 9999;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      cursor: default;
+      -webkit-animation-name: snowflakes-fall, snowflakes-shake;
+      -webkit-animation-duration: 10s, 3s;
+      -webkit-animation-timing-function: linear, ease-in-out;
+      -webkit-animation-iteration-count: infinite, infinite;
+      -webkit-animation-play-state: running, running;
+      animation-name: snowflakes-fall, snowflakes-shake;
+      animation-duration: 10s, 3s;
+      animation-timing-function: linear, ease-in-out;
+      animation-iteration-count: infinite, infinite;
+      animation-play-state: running, running
+    }
+
+    .snowflake:nth-of-type(0) {
+      left: 1%;
+      -webkit-animation-delay: 0s, 0s;
+      animation-delay: 0s, 0s
+    }
+
+    .snowflake:nth-of-type(1) {
+      left: 10%;
+      -webkit-animation-delay: 1s, 1s;
+      animation-delay: 1s, 1s
+    }
+
+    .snowflake:nth-of-type(2) {
+      left: 20%;
+      -webkit-animation-delay: 6s, .5s;
+      animation-delay: 6s, .5s
+    }
+
+    .snowflake:nth-of-type(3) {
+      left: 30%;
+      -webkit-animation-delay: 4s, 2s;
+      animation-delay: 4s, 2s
+    }
+
+    .snowflake:nth-of-type(4) {
+      left: 40%;
+      -webkit-animation-delay: 2s, 2s;
+      animation-delay: 2s, 2s
+    }
+
+    .snowflake:nth-of-type(5) {
+      left: 50%;
+      -webkit-animation-delay: 8s, 3s;
+      animation-delay: 8s, 3s
+    }
+
+    .snowflake:nth-of-type(6) {
+      left: 60%;
+      -webkit-animation-delay: 6s, 2s;
+      animation-delay: 6s, 2s
+    }
+
+    .snowflake:nth-of-type(7) {
+      left: 70%;
+      -webkit-animation-delay: 2.5s, 1s;
+      animation-delay: 2.5s, 1s
+    }
+
+    .snowflake:nth-of-type(8) {
+      left: 80%;
+      -webkit-animation-delay: 1s, 0s;
+      animation-delay: 1s, 0s
+    }
+
+    .snowflake:nth-of-type(9) {
+      left: 90%;
+      -webkit-animation-delay: 3s, 1.5s;
+      animation-delay: 3s, 1.5s
+    }
+
+    .snowflake:nth-of-type(10) {
+      left: 25%;
+      -webkit-animation-delay: 2s, 0s;
+      animation-delay: 2s, 0s
+    }
+
+    .snowflake:nth-of-type(11) {
+      left: 65%;
+      -webkit-animation-delay: 4s, 2.5s;
+      animation-delay: 4s, 2.5s
+    }
+
+    div.a {
+      font-size: 100px;
+    }
+
+    .rotated2 {
+      writing-mode: tb-rl;
+      transform: rotate(-180deg);
+      font-size: 100px;
+    }
+  </style>
+</head>
+<div class="snowflakes" aria-hidden="true">
+  <div class="snowflake">❆</div>
+  <div class="snowflake">o</div>
+  <div class="snowflake">❅</div>
+  <div class="snowflake">d</div>
+  <div class="snowflake">❆</div>
+  <div class="snowflake">i</div>
+  <div class="snowflake">❅</div>
+  <div class="snowflake">n</div>
+  <div class="snowflake">❆</div>
+  <div class="snowflake">a</div>
+  <div class="snowflake">❅</div>
+  <div class="snowflake">k</div>
+  <div class="snowflake">❆</div>
+  <div class="snowflake">a</div>
+  <div class="snowflake">❅</div>
+  <div class="snowflake">❆</div>
+  <div class="snowflake">❅</div>
+  <div class="snowflake">j</div>
+  <div class="snowflake">❆</div>
+  <div class="snowflake">o</div>
+  <div class="snowflake">❅</div>
+  <div class="snowflake">y</div>
+  <div class="snowflake">❆</div>
+  <div class="snowflake">❅</div>
+</div>
+
+<body>
+  <header class="nav lg-nav">
+    <nav class="header">
+      <div class="header__brand"><a href="/"><img src="./images/logo.png" alt="Odinaka Joy" /></a></div>
+      <ul class="header__links">
+        <li><a href="/about-me">ABOUT</a></li>
+        <li><a href="/projects">PROJECTS</a></li>
+        <li><a href="/communities">COMMUNITIES</a></li>
+        <li><a href="/talks">TALKS</a></li>
+        <li><a href="/contact-me">CONTACT</a></li>
+        <li class="resume"><a href="https://dinakajoy.github.io/resume/" target="_BLANK">Resume</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <header class="nav sm-nav">
+    <nav class="header">
+      <div class="header__brand"><a href="/"><img src="./images/logo.png" alt="Odinaka Joy" /></a></div>
+      <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="overlay-content">
+          <a href="/about-me">ABOUT</a>
+          <a href="/projects">PROJECTS</a>
+          <a href="/communities">COMMUNITIES</a>
+          <a href="/talks">TALKS</a>
+          <a href="/contact-me">CONTACT</a>
+          <a href="https://dinakajoy.github.io/resume/" target="_BLANK" class="resume">Resume</a>
+        </div>
+      </div>
+      <span class="go-right" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+    </nav>
+  </header>
+
+  <main>
+    <section id="communities">
+      <div class="container">
+        <div class="community">
+          <p class="me">I believe we grow more by being around like-minds. Also being a part of communities has tremendously helped in my growth that all I can think now is how to give back to the community. Hence, I mentor and offer career advice to newbies in web development and tech in general. I am an active member of the following communities :</p>
+          <div class="comm">
+            <div class="img"><img src="./images/communities/devc.jpg" alt="Developers Circle"></div>
+            <div class="details">
+              <h2>Developers Circle (DevC) Port Harcourt</h2>
+              <p>Developer Circles are forums to share knowledge, collaborate, build new ideas, and learn about the latest technologies from Facebook and other industry leaders. Developer Circles empowers a diverse range of technical talent to improve their skills and offers them accessibility to the information they need.
+              <br />
+              In my role as a mentor for DevC trainings, I mentor learners that want to become JavaScript developers.
+              This involves keeping up with their progress and helping them out whenever they encounter blockers.</p>
+            </div>
+          </div>
+
+          <div class="comm">
+            <div class="img"><img src="./images/communities/sheCodesAfrica.jpg" alt="She Codes Africa"></div>
+            <div class="details">
+              <h2>She Codes Africa</h2>
+              <p>She Codes Africa is all about celebrating and empowering Women in Tech across Africa with a mission to build a community that embodies technical growth, networking, mentorship and visibility amongst all level career roles in Technology. <br />
+              In my role as a mentor for cohort2 training, I mentor learners that want to become JavaScript developers and help them not only to learn but build projects. This involves keeping up with their progress and helping them out whenever they encounter blockers.</p>
+            </div>
+          </div>
+
+          <div class="comm">
+            <div class="img"><img src="./images/communities/herTechTrails.jpg" alt="Her Tech Trail"></div>
+            <div class="details">
+              <h2>Her Tech Trail Port Harcourt</h2>
+              <p>HerTechTrail is a non profit organization whose aims is to ensure ladies sustain a career in tech via trainings and access to job opportunities.<br />
+              In my role as a mentor, I guide beginners as they go through their journey in web development and other tech areas. This involves keeping up with their progress and helping them out whenever they encounter blockers.
+              </p>
+            </div>
+          </div>
+
+          <div class="comm">
+            <div class="img"><img src="./images/communities/alc.jpg" alt="Andela Learning Community"></div>
+            <div class="details">
+              <h2>Andela Learning Community (ALC)</h2>
+              <p>The Andela Learning Community is a network of technologists and tech enthusiasts across Africa dedicated to learning how to use technology to solve humanity’s problems. It's goal is to provide an ever-growing population of technologists with the resources and environments they need to become world-class problem solvers.</p>
+            </div>
+          </div>
+
+          <div class="comm">
+            <div class="img"><img src="./images/communities/gdg.jpg" alt="Google Developer Group"></div>
+            <div class="details">
+              <h2>Google Developer Group (GDG) Port Harcourt</h2>
+              <p>As a member of the Google Developer Group, you'll have the opportunity to meet local developers with
+                similar interests in technology. A GDG meetup event includes talks on a wide range of technical topics
+                where you can learn new skills through hands-on workshops. The community prides itself on being an
+                inclusive environment where everyone and anyone interested in tech - from beginner developers to
+                experienced professionals - all are welcome to join.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Designed & Developed By Odinaka Joy</p>
+    <div class="socials">
+      <a href="https://github.com/dinakajoy" target="_blank" rel="noopener noreferrer"><i class="fa fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/dinakajoy/" target="_blank" rel="noopener noreferrer"><i
+          class="fa fa-linkedin"></i></a>
+      <a href="https://twitter.com/dinakajoy" target="_blank" rel="noopener noreferrer"><i
+          class="fa fa-twitter"></i></a>
+      <a href="http://facebook.com/odinaka.joy" target="_blank" rel="noopener noreferrer"><i
+          class="fa fa-facebook"></i></a>
+      <a href="https://stackoverflow.com/users/10469483/odinaka-joy" target="_blank" rel="noopener noreferrer"><i
+          class="fa fa-stack-overflow"></i></a>
+      <!-- <a href="https://www.freecodecamp.org/dinakajoy" target="_blank" rel="noopener noreferrer"><i class="fa fa-free-code-camp"></i></a> -->
+      <!-- <a href="https://www.hackerrank.com/dinakajoy" target="_blank" rel="noopener noreferrer"><i class="fa fa-code"></i></a> -->
+      <a href="https://codepen.io/dinakajoy" target="_blank" rel="noopener noreferrer"><i class="fa fa-codepen"></i></a>
+    </div>
+  </footer>
+  <script>
+    function openNav() {
+      document.getElementById("myNav").style.width = "100%";
+    }
+
+    function closeNav() {
+      document.getElementById("myNav").style.width = "0%";
+    }
+  </script>
+  <script src="../js/main.js"></script>
+</body>
+
+</html>
