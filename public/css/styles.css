@@ -114,14 +114,14 @@ header.lg-nav {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
+  filter: blur(0px);
+}
+.showcase:hover::after {
   filter: blur(10px);
   transition: all 2s;
 }
-.showcase:hover::after {
-  filter: blur(0px);
-}
 .showcase:hover .showcase__content {
-  filter: blur(3px);
+  filter: blur(0);
   transition: all 2s;
 }
 .showcase__content {
@@ -136,6 +136,8 @@ header.lg-nav {
   align-content: center;
   width: 60%;
   padding-bottom: 70px;
+  filter: blur(5px);
+  transition: all 2s;
 }
 .showcase__content h1 {
   font-size: 3.2rem;
@@ -204,6 +206,10 @@ header.lg-nav {
   display: grid;
   grid-template-columns: 50% 50%;
   margin: 50px auto;
+  grid-gap: 10px;
+}
+.tools {
+  border-right: 2px solid #ccc;
 }
 #skills .fa {
   margin-right: 10px;
@@ -275,7 +281,7 @@ header.lg-nav {
 
 /* Communities Styles */
 .community .me {
-  font-size: 1.2rem;
+  font-size: 1rem;
   text-align: justify;
 }
 .comm {
@@ -480,6 +486,15 @@ footer .socials .fa {
   }
   .showcase::after {
     background-image: url(../images/background-sm.png);
+    filter: blur(10px);
+  }
+  .showcase:hover .showcase__content {
+    filter: blur(0);
+    transition: all 2s;
+  }
+  .showcase__content {
+    filter: blur(0px);
+    transition: all 2s;
   }
   .project, .community, .contact {
     width: 90%;
@@ -496,6 +511,9 @@ footer .socials .fa {
   }
   .skill-details {
     margin-top: 30px;
+  }
+  .tools {
+    border-right: none;
   }
   .proj, .proj:nth-child(even) {
     display: grid;
@@ -531,5 +549,8 @@ footer .socials .fa {
   }
   .showcase__content h1 {
     font-size: 2.2rem;
+  }
+  .tools {
+    border-right: none;
   }
 }
