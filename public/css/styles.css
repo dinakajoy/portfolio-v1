@@ -39,7 +39,6 @@ main {
 .home-main {
   margin: 0 auto;
   margin-top: 100px;
-  margin-bottom: 30px;
 }
 .container {
   width: 90%;
@@ -112,12 +111,11 @@ header.lg-nav {
   height: 95%;
   background-image: url('../images/background.png');
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: center right;
   background-size: cover;
-  filter: blur(0px);
+  opacity: .5;
 }
 .showcase:hover::after {
-  filter: blur(10px);
   transition: all 2s;
 }
 .showcase:hover .showcase__content {
@@ -135,8 +133,8 @@ header.lg-nav {
   justify-content: center;
   align-content: center;
   width: 60%;
-  padding-bottom: 70px;
-  filter: blur(5px);
+  padding-top: 40px;
+  padding-bottom: 100px;
   transition: all 2s;
 }
 .showcase__content h1 {
@@ -434,7 +432,6 @@ footer .socials .fa {
   .home-main {
     margin: 0 auto;
     margin-top: 100px;
-    margin-bottom: 30px;
   }
   .showcase__content {
     width: 90%;
@@ -485,8 +482,8 @@ footer .socials .fa {
     font-size: 60px;
   }
   .showcase::after {
-    background-image: url(../images/background-sm.png);
-    filter: blur(10px);
+    background-image: url(../images/background-md.png);
+    opacity: .4;
   }
   .showcase:hover .showcase__content {
     filter: blur(0);
