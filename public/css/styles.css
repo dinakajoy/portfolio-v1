@@ -206,7 +206,7 @@ header.lg-nav {
   margin: 50px auto;
   grid-gap: 10px;
 }
-.tools {
+.skill .tools {
   border-right: 2px solid #ccc;
 }
 #skills .fa {
