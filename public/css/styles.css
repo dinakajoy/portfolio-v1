@@ -275,6 +275,16 @@ header.lg-nav {
 .proj:nth-child(even) .img {
   order: 2;
 }
+/* .wp-proj {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  margin: 100px auto;
+  grid-gap: 20px;
+} */
+.wp-proj {
+  height: 300px;
+  overflow: auto;
+}
 
 /* Communities Styles */
 .community .me {
@@ -498,7 +508,7 @@ footer .socials .fa {
     width: 90%;
     margin: 0 auto;
   }
-  .proj, .comm, .tk, .skill, .about-us {
+  .proj, .wp-proj, .comm, .tk, .skill, .about-us {
     grid-template-columns: 1fr;
   }
   .about-us .right {

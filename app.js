@@ -25,6 +25,9 @@ app.get('/contact-me', (req, res) => {
 app.get('/projects', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'projects.html'));
 })
+app.get('/wordpress-projects', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'wordpress-projects.html'));
+})
 app.get('/talks', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'talks.html'));
 })
