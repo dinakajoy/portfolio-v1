@@ -261,7 +261,7 @@
         <div class="cont">
           <form action="">
             <input type="text" name="uname" id="uname" placeholder="Your Name Please..." required>
-            <input type="email" name="from" id="from" placeholder="Your Email Please..." required>
+            <input type="email" name="email" id="email" placeholder="Your Email Please..." required>
             <input type="text" name="subject" id="subject" placeholder="Your Reason Please..." required>
             <textarea name="body" id="body" cols="30" rows="10" placeholder="Your Message Please..." required></textarea>
             <input type="submit" id="submit" value="SEND">
@@ -312,6 +312,56 @@
     }
   </script>
   <script src="./js/main.js"></script>
+  <script>
+    const submitFrm = async(data) => {
+      const response = await fetch('/contact-form', {
+        method: 'POST',
+        // mode: 'cors',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+      });
+      return response.json();
+    };
+
+    const sanitize = (string) => {
+      const map = {
+        '&': '&amp;',
+        '<': '&lt;',
+        '>': '&gt;',
+        '"': '&quot;',
+        "'": '&#x27;',
+        "/": '&#x2F;',
+      };
+      const reg = /[&<>"'/]/ig;
+      return string.replace(reg, (match)=>(map[match]));
+    }
+
+    const response = document.getElementById('response');
+    const submit = document.getElementById('submit');
+    submit.addEventListener('click', async(e) => {
+      submit.disabled = true;
+      submit.innerHTML = `<img src="images/button__loader.gif" alt="Submitting..." />`;
+      const uname = document.getElementById('uname').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const message = document.getElementById('message').value.trim();
+      e.preventDefault();
+      const data = { uname: sanitize(uname), email: sanitize(email), subject: sanitize(subject), body: sanitize(body) };
+      const result = await submitFrm(data);
+      submit.innerHTML = 'Submitted';
+      if(result.message !== undefined) {
+        response.style.display = 'block';
+        response.style.color = 'green';
+        response.innerHTML = result.message;
+      } else {
+        response.style.display = 'block';
+        response.style.color = 'red';
+        response.innerHTML = result.error;
+      }
+    });
+  </script>
 </body>
 
 </html>

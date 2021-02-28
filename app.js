@@ -2,10 +2,14 @@ const express = require('express');
 const path = require('path');
 const sendMail = require('./mail');
 
+const { contactFormValidationRules, validate } = require('./validators/forms');
+const contactForm = require('./mail/contact');
 const app = express();
-app.use(express.static('public'));
-app.use(express.urlencoded({extended: false}));
+
+app.use(cors());
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+app.use(express.static('public'));
 
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'index.html'));
@@ -28,21 +32,18 @@ app.get('/wordpress-projects', (req, res) => {
 app.get('/talks', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'talks.html'));
 })
-app.post('/mail', (req, res) => {
-  const {name, from, subject, body} = req.body;
-  sendMail(from, name, subject, body, (err, data) => {
-    if(err) {
-      // res.status(500).json({
-      //   message: 'Internal Error, Please Resend'
-      // })
-      throw err;
+
+app.post('/contact-form', contactFormValidationRules(), validate, (req, res) => {
+  const data = { ...req.body };
+  contactForm.contactMail(data, (error, response) => {
+    if (error) {
+      res.status(500).json({ error: error });
     } else {
-      res.json({
-        message: 'Your Message has Been Sent'
-      })
+      res.status(200).json({ message: response });
     }
-  })
-})
+  });
+});
+
 app.get("/sw_Site.js", (req, res) => {
   res.sendFile(path.resolve(__dirname, "./sw_Site.js"));
 });
