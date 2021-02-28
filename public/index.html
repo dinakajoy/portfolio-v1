@@ -4,24 +4,27 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="description" content="Odinaka Joy is a Software Engineer and Mentor/Facilitator with hands-on experience in front-end (HTML, CSS, JavaScript, Bootstrap, React) and back-end (PHP/Laravel, Node/Express) web development. But she currently prefers to work in the JavaScript World">
+  <meta name="description" content="Odinaka Joy is a Software Engineer, Speaker and Mentor with hands-on experience in front-end (HTML, CSS, JavaScript, TypeScript, React) and back-end (Node/Express) web development. She is a genaralist and that makes her spends time to understand underlying concepts.">
   <meta name="author" content="Odinaka Joy">
   <!-- twitter card  -->
   <meta property="og:type" content="website"/>
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:site" content="@nytimesbits" />
+  <meta property="og:site_name" content="Odinaka Joy Portfolio Website">
+  <meta property="og:title" content=" Portfolio | Odinaka Joy">
+  <meta property="og:description" content=" Odinaka Joy is a Software Engineer, Speaker and Mentor with hands-on experience in front-end (HTML, CSS, JavaScript, TypeScript, React) and back-end (Node/Express) web development. She is a genaralist and that makes her spends time to understand underlying concepts.">
+  <meta property="og:image" content=" https://res.cloudinary.com/dbniq3vnh/image/upload/v1614522391/accomplice/odinaka-joy.jpg">
+  <meta property="og:url" content="http://dinakajoy.com">
   <meta name="twitter:creator" content="@dinakajoy" />
-  <meta property="og:url" content="http://dinakajoy.com" />
-  <meta property="og:title" content="Portfolio | Odinaka Joy" />
-  <meta property="og:description" content="Odinaka Joy is a Software Engineer with hands-on experience in front-end (HTML, CSS, JavaScript, Bootstrap, React) and back-end (Node/Express) web development. She is also a Project Manager and Mentor/Facilitator" />
-  <meta property="og:image" content="./images/dinakajoy.png" />
+  <meta name="twitter:title" content=" Portfolio | Odinaka Joy">
+  <meta name="twitter:description" content=" Odinaka Joy is a Software Engineer, Speaker and Mentor with hands-on experience in front-end (HTML, CSS, JavaScript, TypeScript, React) and back-end (Node/Express) web development. She is a genaralist and that makes her spends time to understand underlying concepts.">
+  <meta name="twitter:image:alt" content="Odinaka Joy">
+  <meta name="twitter:image" content=" https://res.cloudinary.com/dbniq3vnh/image/upload/v1614522391/accomplice/odinaka-joy.jpg">
+  <meta name="twitter:card" content="dinakajoy">
   <!-- End of twitter card -->
-  <link rel="shortcut icon" href="./images/dinakajoy.png">
   <link rel="shortcut icon" href="./images/logo.png" type="image/x-icon">
   <title>Portfolio | Odinaka Joy</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./css/styles.css">
+  <link rel="stylesheet" href="./css/home.css">
   <style>
     /* customizable snowflake styling */
     .snowflake {
@@ -209,29 +212,29 @@
 </div>
 
 <body>
-  <header class="nav lg-nav">
-    <nav class="header">
-      <div class="header__brand"><a href="/"><img src="./images/logo.png" alt="Odinaka Joy" /></a></div>
-      <ul class="header__links">
-        <li><a href="/about-me">ABOUT</a></li>
-        <li><a href="/projects">PROJECTS</a></li>
-        <li><a href="/communities">COMMUNITIES</a></li>
-        <li><a href="/talks">TALKS</a></li>
-        <li><a href="/contact-me">CONTACT</a></li>
-        <li class="resume"><a href="https://dinakajoy.github.io/resume/" target="_BLANK">Resume</a></li>
-      </ul>
-    </nav>
+  <header class="header lg-nav">
+    <div class="container">
+      <nav class="header-wrapper">
+        <div class="header__brand"><a href="/"><img src="./images/logo.png" alt="Odinaka Joy" /></a></div>
+        <ul class="header__links">
+          <li><a href="/about-me">ABOUT</a></li>
+          <li><a href="/projects">PROJECTS</a></li>
+          <li><a href="/talks">TALKS</a></li>
+          <li><a href="/contact-me">CONTACT</a></li>
+          <li class="resume"><a href="https://dinakajoy.github.io/resume/" target="_BLANK">Resume</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <header class="nav sm-nav">
-    <nav class="header">
+  <header class="header sm-nav">
+    <nav class="header-wrapper">
       <div class="header__brand"><a href="/"><img src="./images/logo.png" alt="Odinaka Joy" /></a></div>
       <div id="myNav" class="overlay">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         <div class="overlay-content">
           <a href="/about-me">ABOUT</a>
           <a href="/projects">PROJECTS</a>
-          <a href="/communities">COMMUNITIES</a>
           <a href="/talks">TALKS</a>
           <a href="/contact-me">CONTACT</a>
           <a href="https://dinakajoy.github.io/resume/" target="_BLANK" class="resume">Resume</a>
@@ -240,32 +243,40 @@
       <span class="go-right" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
     </nav>
   </header>
-  <main class="home-main">
-    <article class="showcase">
+
+  <main>
+    <section class="showcase">
       <div class="container">
-        <section class="showcase__content">
-          <h1><span class="sm-title">Hi, I am</span>ODINAKA JOY</h1>
-          <p class="title2">I build for the web</p>
-          <hr class="short" />
-          <p class="showcase__paragraph">I'm a Software Engineer specialized in designing and developing exceptional websites and web applications</p>
-          <p>Need pictures or my bio for a feature or speaker graphics? <a href="/bio">click here</a></p>
-          <a href="/contact-me" target="_BLANK" class="showcase__btn">Get In Touch</a>
-        </section>
+        <div class="showcase__content">
+          <div class="showcase__text">
+            <div class="sm-title">Hi, I am</div>
+            <h1>ODINAKA JOY</h1>
+            <h2 class="title2">I build for the web</h2>
+            <hr class="short" />
+            <p>I'm a Software Engineer specialized in designing and developing exceptional websites and web applications</p>
+            <p>Need pictures or my bio for a feature or speaker graphics? <a href="/bio">click here</a></p>
+            <a href="/contact-me" target="_BLANK" class="showcase__btn">Get In Touch</a>
+          </div>
+          <div class="showcase__img">
+            <img src="./images/home-img.jpg" alt="Odinaka Joy">
+          </div>
+        </div>
       </div>
-    </article>
+    </section>
   </main>
 
   <footer class="footer">
-    <p>Designed & Developed By Odinaka Joy</p>
-    <div class="socials">
-      <a href="https://github.com/dinakajoy" target="_blank" rel="noopener noreferrer"><i class="fa fa-github"></i></a>
-      <a href="https://www.linkedin.com/in/dinakajoy/" target="_blank" rel="noopener noreferrer"><i class="fa fa-linkedin"></i></a>
-      <a href="https://twitter.com/dinakajoy" target="_blank" rel="noopener noreferrer"><i class="fa fa-twitter"></i></a>
-      <a href="http://facebook.com/dinakajoy" target="_blank" rel="noopener noreferrer"><i class="fa fa-facebook"></i></a>
-      <a href="https://stackoverflow.com/users/10469483/dinakajoy" target="_blank" rel="noopener noreferrer"><i class="fa fa-stack-overflow"></i></a>
-      <!-- <a href="https://www.freecodecamp.org/dinakajoy" target="_blank" rel="noopener noreferrer"><i class="fa fa-free-code-camp"></i></a> -->
-      <!-- <a href="https://www.hackerrank.com/dinakajoy" target="_blank" rel="noopener noreferrer"><i class="fa fa-code"></i></a> -->
-      <a href="https://codepen.io/dinakajoy" target="_blank" rel="noopener noreferrer"><i class="fa fa-codepen"></i></a>
+    <div class="container">
+      <div class="footer-wrapper">
+        <p>Designed & Developed By Odinaka Joy</p>
+        <div class="socials">
+          <a href="https://github.com/dinakajoy" target="_blank" rel="noopener noreferrer"><i class="fa fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/dinakajoy/" target="_blank" rel="noopener noreferrer"><i class="fa fa-linkedin"></i></a>
+          <a href="https://twitter.com/dinakajoy" target="_blank" rel="noopener noreferrer"><i class="fa fa-twitter"></i></a>
+          <a href="http://facebook.com/dinakajoy" target="_blank" rel="noopener noreferrer"><i class="fa fa-facebook"></i></a>
+          <a href="https://stackoverflow.com/users/10469483/dinakajoy" target="_blank" rel="noopener noreferrer"><i class="fa fa-stack-overflow"></i></a>
+        </div>
+      </div>
     </div>
   </footer>
   <script>

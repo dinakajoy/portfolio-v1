@@ -16,9 +16,6 @@ app.get('/about-me', (req, res) => {
 app.get('/bio', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'bio.html'));
 })
-app.get('/communities', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'communities.html'));
-})
 app.get('/contact-me', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'contact.html'));
 })
@@ -53,7 +50,7 @@ app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', '/not_found.html'));
 })
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 5500;
 
 app.listen(PORT, () => {
   console.log();
