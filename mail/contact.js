@@ -4,8 +4,8 @@ require('dotenv').config();
 
 exports.contactMail = (formData, cb) => {
   const transporter = nodemailer.createTransport(smtp({
-    service: 'appstation',
-    host: 'mail.appstation.ng',
+    service: 'standardspeechguide',
+    host: 'mail.standardspeechguide.com',
     port: 465,
     secure: true,
     auth: {

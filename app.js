@@ -1,8 +1,8 @@
 const express = require('express');
 const path = require('path');
-const sendMail = require('./mail');
+const cors = require('cors');
 
-const { contactFormValidationRules, validate } = require('./validators/forms');
+const { contactFormValidationRules, validate } = require('./validators/form');
 const contactForm = require('./mail/contact');
 const app = express();
 
