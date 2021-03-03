@@ -11,19 +11,20 @@ if('serviceWorker' in navigator) {
 
 document.querySelector('#submit').addEventListener('click', (e) => {
     e.preventDefault();
-    const output = document.querySelector('.output');
-    output.disabled = true;
+    const response = document.querySelector('#response');
+    response.disabled = true;
     const data = {
-        from: document.querySelector('#from').value,
         name: document.querySelector('#uname').value,
+        email: document.querySelector('#email').value,
         subject: document.querySelector('#subject').value,
         body: document.querySelector('#body').value
     }
+    console.log(data);
 
-    fetch('/mail', {method: 'POST', headers: {'Content-Type': 'application/json'},  credentials: 'same-origin', body: JSON.stringify(data)})
+    fetch('/contact-form', {method: 'POST', headers: {'Content-Type': 'application/json'},  credentials: 'same-origin', body: JSON.stringify(data)})
         .then(response => response.json())
         .then(data => {
-            output.innerHTML = data.message;
-            output.disabled = false;
+            response.innerHTML = data.message;
+            response.disabled = false;
         });
 })

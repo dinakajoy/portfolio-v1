@@ -203,7 +203,7 @@ footer .socials .fa {
   }
   .showcase__content {
     grid-template-columns: 1fr;
-    min-height: auto;
+    min-height: 90vh;
     z-index: 5;
 
   }

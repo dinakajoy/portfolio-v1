@@ -259,11 +259,12 @@
         <br />
         <div class="output"></div>
         <div class="cont">
-          <form action="">
+          <form action="" method="POST" enctype="multipart/form-data">
             <input type="text" name="uname" id="uname" placeholder="Your Name Please..." required>
             <input type="email" name="email" id="email" placeholder="Your Email Please..." required>
             <input type="text" name="subject" id="subject" placeholder="Your Reason Please..." required>
             <textarea name="body" id="body" cols="30" rows="10" placeholder="Your Message Please..." required></textarea>
+            <div id="response" style="display:none;text-align:center;font-weight: bolder;"></div>
             <input type="submit" id="submit" value="SEND">
           </form>
 
@@ -312,7 +313,7 @@
     }
   </script>
   <script src="./js/main.js"></script>
-  <script>
+  <!-- <script>
     const submitFrm = async(data) => {
       const response = await fetch('/contact-form', {
         method: 'POST',
@@ -341,14 +342,17 @@
     const response = document.getElementById('response');
     const submit = document.getElementById('submit');
     submit.addEventListener('click', async(e) => {
+      e.preventDefault();
+
       submit.disabled = true;
-      submit.innerHTML = `<img src="images/button__loader.gif" alt="Submitting..." />`;
+      submit.innerHTML = `<img src="./images/button__loader.gif" alt="Submitting..." />`;
       const uname = document.getElementById('uname').value.trim();
       const email = document.getElementById('email').value.trim();
-      const phone = document.getElementById('phone').value.trim();
-      const message = document.getElementById('message').value.trim();
-      e.preventDefault();
+      const subject = document.getElementById('subject').value.trim();
+      const body = document.getElementById('body').value.trim();
+      
       const data = { uname: sanitize(uname), email: sanitize(email), subject: sanitize(subject), body: sanitize(body) };
+      console.log(data);
       const result = await submitFrm(data);
       submit.innerHTML = 'Submitted';
       if(result.message !== undefined) {
@@ -361,7 +365,7 @@
         response.innerHTML = result.error;
       }
     });
-  </script>
+  </script> -->
 </body>
 
 </html>
