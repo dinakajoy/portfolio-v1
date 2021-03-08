@@ -173,28 +173,27 @@ header.lg-nav {
 /* Projects Styles */
 .proj {
   display: grid;
-  grid-template-columns: 60% 40%;
-  margin: 100px auto;
+  grid-template-columns: 1fr 1fr;
+  padding: 50px 0;
   grid-gap: 20px;
 }
 .proj .details, .proj .img {
-  margin: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 .proj .tools, .proj .details p, .proj .links {
-  margin-top: 20px;
+  margin-top: 10px;
 }
 .proj .details h2 {
   color: rgba(204, 204, 204, 0.65);
 }
 .proj .tools span {
-  background-color: rgba(51, 51, 51, 0.424);
-  color: rgba(204, 204, 204, 0.65);
+  background-color: rgba(51, 51, 51, 0.644);
+  color: rgba(233, 231, 231, 0.65);
   margin: 5px;
-  padding: 0px 5px;
-  border-radius: 10px;
+  padding: 0px 6px;
+  border-radius: 5px;
   display: inline-block;
 }
 .proj .links, .tk .links {
@@ -206,16 +205,17 @@ header.lg-nav {
   font-size: 26px;
 }
 .proj img {
-  max-width: 100%;
-}
-.img {
   width: 100%;
 }
+.img {
+  height: 350px;
+}
 .proj:nth-child(even) {
-  grid-template-columns: 40% 60%;
+  grid-template-columns: 1fr 1fr;
 }
 .proj:nth-child(even) .img {
   order: 2;
+  align-items: flex-end;
 }
 /* .wp-proj {
   display: grid;
@@ -226,29 +226,6 @@ header.lg-nav {
 .wp-proj {
   height: 300px;
   overflow: auto;
-}
-
-/* Communities Styles */
-.community .me {
-  font-size: 1rem;
-  text-align: justify;
-}
-.comm {
-  display: grid;
-  grid-template-columns: 45% 55%;
-  margin: 100px auto;
-  grid-gap: 20px;
-}
-.comm .details, .comm .img {
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.comm img {
-  max-width: 100%;
-  border: 8px solid var(--gold-color);
-  border-radius: 5px;
 }
 
 /* Talks Styles */
@@ -454,8 +431,20 @@ footer .socials .fa {
     width: 90%;
     margin: 0 auto;
   }
-  .proj, .wp-proj, .comm, .tk, .skill, .about-us {
+  .wp-proj, .comm, .tk, .skill, .about-us {
     grid-template-columns: 1fr;
+  }
+  .proj:nth-child(even) {
+    grid-template-columns: 1fr;
+  }
+  .proj {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 10px 0;
+    grid-gap: 10px;
+  }
+  .img {
+    height: auto;
   }
   .about-us .right {
     margin-top: 50px;
@@ -469,11 +458,11 @@ footer .socials .fa {
   .tools {
     border-right: none;
   }
-  .proj, .proj:nth-child(even) {
+  .proj:nth-child(even) {
     display: grid;
     grid-template-columns: 1fr;
-    margin: 80px auto;
-    grid-gap: 40px;
+    margin: 20px auto;
+    grid-gap: 20px;
   }
   .proj:nth-child(even) .details {
     order: 2;
