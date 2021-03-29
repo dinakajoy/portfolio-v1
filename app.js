@@ -35,18 +35,14 @@ app.get('/talks', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'talks.html'));
 })
 
-// app.post('/contact-form', contactFormValidationRules(), validate, (req, res) => {
-app.post('/contact-form', (req, res) => {
-  const data = { ...req.body };
-  console.log(data);
-  // contactForm.contactMail(data, (error, response) => {
-  //   if (error) {
-  //     res.status(500).json({ error: error });
-  //   } else {
-  //     res.status(200).json({ message: response });
-  //   }
-  // });
-  return 'success'
+app.post('/contact-form', contactFormValidationRules(), validate, (req, res) => {
+  contactForm.contactMail(req.body, (error, response) => {
+    if (error) {
+      res.status(500).json({ error: error });
+    } else {
+      res.status(200).json({ message: response });
+    }
+  });
 });
 
 app.get("/sw_Site.js", (req, res) => {

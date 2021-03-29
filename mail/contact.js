@@ -3,11 +3,10 @@ const smtp = require('nodemailer-smtp-transport');
 require('dotenv').config();
 
 exports.contactMail = (formData, cb) => {
-  const transporter = nodemailer.createTransport(smtp({
-    service: 'standardspeechguide',
-    host: 'mail.standardspeechguide.com',
-    port: 465,
-    secure: true,
+  const transporter = nodemailer.createTransport({
+    host: "standardspeechguide.com",
+    port: 587,
+    secure: false,
     auth: {
       user: process.env.USER,
       pass: process.env.PASSWORD
@@ -15,7 +14,7 @@ exports.contactMail = (formData, cb) => {
     tls: {
       rejectUnauthorized: false
     }
-  }));
+  });
 
   const mailOptions = {
     from: process.env.USER,
@@ -25,7 +24,7 @@ exports.contactMail = (formData, cb) => {
       <h2>Treat As Urgent</h2>
       <P>Someone just contacted me via my portfolio website. Details below: </p>
       <br />
-      <p><strong>Name: </strong> ${formData.uname}</p>
+      <p><strong>Name: </strong> ${formData.name}</p>
       <p><strong>Email: </strong> ${formData.email}</p>
       <p><strong>Subject: </strong> ${formData.subject}</p>
       <p><strong>Message: </strong> ${formData.body}</p>
