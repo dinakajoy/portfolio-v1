@@ -18,7 +18,7 @@ Give credit to me
 * Node - To serve the web pages
 
 ## Link
-Access app via https://dinakajoy.com
+Access app via https://dinakajoy-portfolio.herokuapp.com/
 
 ## Author
 [Odinaka Joy](https://dinakajoy.com)
